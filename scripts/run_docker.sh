@@ -1,0 +1,1 @@
+docker run --rm -it -v `realpath sampler-distillation`:/ensembling --gpus="device=0" dens

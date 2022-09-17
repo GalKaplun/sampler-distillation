@@ -1,0 +1,14 @@
+# @package _group_
+_target_: src.models.Cifar10Model
+
+arch: Resnet18
+learning_rate: 0.1
+weight_decay: 5e-4
+schedule: cos
+teach_arch: non
+teach_dir: ./models/noisy
+max_teachers: 10
+ensemble: False
+
+max_epochs: ${trainer.max_epochs}
+dataset: ${datamodule.dataset}
